@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+        <script src="scripts.js"></script>
+        <title>АэроСибТрейд</title>
+    </head>
+<body id="body">
+    <!--Сертификаты-->
+    <div class="sertificates">
+
+    </div>
+
+    <div class="header">
+        <div class="container">
+            <div class="header_inner">
+                <!--Логотип-->
+                <div class="logo">
+                    <img src="images/plane.png" alt="">
+                    <img src="images/gear.png" alt="" class="gear">
+                </div>
+
+                <!--Навигация-->
+                <nav>
+                    <a href="#intro" class="nav-item">О нас</a>
+                    <button class="production nav-item" onclick="toggleClass(document.getElementById('production-button'), 'active')" id="production-button">Продукция <img src="images/arrow.png" alt="">
+                        <!--Лист с продукцией-->
+                        <ul class="menu-list">
+                            <li onclick="toggleClass(document.getElementById('prod-li1'), 'active'), event.stopPropagation();" id="prod-li1">Для Российской АТ
+                                <ul class="submenu-list hidden" id="product-ru-sbmnlst">
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 0)">Запчасти для ТО<img src="images/arrow_production.png" alt="">
+                                            <h1>Рукава, муфты, хамуты, гайки, болты и тд</h1>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 1)">Резино-техническая продукция<img src="images/arrow_production.png" alt="">
+                                            <h1>Кольца уплотнительные, манжеты, прокладки</h1>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 2)">Метизы<img src="images/arrow_production.png" alt="">
+                                            <h1>Винты, гайки, шайбы, заклепки по ОСТ1</h1>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 3)">Агрегаты<img src="images/arrow_production.png" alt="">
+                                            <h1>Насосы, реле, свечезажигатели, антены и т.д.</h1>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li onclick="toggleClass(document.getElementById('prod-li2'), 'active'), event.stopPropagation();" id="prod-li2">Для Зарубежной АТ
+                                <ul class="submenu-list hidden" id="product-frgn-sbmnlst">
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 0)">Запчасти для ТО<img src="images/arrow_production.png" alt="">
+                                            <h1>Рукава, муфты, хамуты, гайки, болты и тд</h1>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 1)">Резино-техническая продукция<img src="images/arrow_production.png" alt="">
+                                            <h1>Кольца уплотнительные, манжеты, прокладки</h1>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#feedback" onclick="setText(document.getElementById('email-message'), 3)">Агрегаты<img src="images/arrow_production.png" alt="">
+                                            <h1>...</h1>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </button>
+                    <button class="nav-item" onclick="addClass(document.getElementById('body'), 'lock')">Сертификаты</button>
+                    <a href="#feedback" class="nav-item">Обратная связь</a>
+                </nav>
+
+                <!--Контакты-->
+                <div class="contacts">
+                    <button class="number" onclick="copyText('+7 999 999-99-99', 'Телефон скопирован!')">+7 999 999-99-99</button>
+                    <button class="email" onclick="copyText('ivanov120@yandex.ru', 'Почта скопирована!')">ivanov120@yandex.ru</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="intro" id="intro">
+        <div class="container">
+            <div class="socnet">
+                <a href=""><img src="images/WhatsApp.png" alt=""></a>
+                <a href=""><img src="images/Telegram.png" alt=""></a>
+            </div>
+
+            <div class="greeting-card">
+                <h1>О нас</h1>
+                <h2>АэроСибТрейд</h2>
+                <h3>Проверенное качество продукции, широкой асортимент товаров и доставка в любую точку мира</h3>
+                <a href="#feedback" onmouseenter="setImage('images/bolt_hover.png', 'bolt-image')" onmouseleave="setImage('images/bolt.png', 'bolt-image')"><img src="images/bolt.png" alt="" id="bolt-image">Оформить заказ</a>
+            </div>
+
+            <img src="images/introimage0.png" alt="" class="intro-image" id="intro-image">
+
+            <a href="#benefits" class="mouseicon"><img src="images/Mouse.png" alt=""><a>
+        </div>
+    </div>
+
+    <div class="benefits" id="benefits">
+        <div class="container">
+            <h1 class="blocktitle">ПРЕИМУЩЕСТВА</h1>
+            <h1 class="questiontext">Почему <font color="#1D74ED">лучше заказывать у нас</font>?</h1>
+            <img src="images/question.png" alt="">
+
+            <div class="benefits-list">
+                <div class="benefits-list-item">
+                    <div><img src="images/benef-catalogico.png" alt=""></div>
+                    <h1>Каталог запчастей</h1>
+                    <p>Мы повышаем кол-во товаров на складах и их качество</p>
+                </div>
+                <div class="benefits-list-item">
+                    <div><img src="images/benf-qualityico.png" alt=""></div>
+                    <h1>Качество товара</h1>
+                    <p>Отличное качество товара, а также он приспособлен к эксплуатации</p>
+                </div>
+                <div class="benefits-list-item">
+                    <div><img src="images/benef-deliveryico.png" alt=""></div>
+                    <h1>Скорость доставки</h1>
+                    <p>Описание которое определим позже на последующих этапах создания сайта</p>
+                </div>
+                <div class="benefits-list-item">
+                    <div><img src="images/benef-garantyico.png" alt=""></div>
+                    <h1>Долгая гарантия</h1>
+                    <p>Если товар выйдет из строя, вы сможете получить назад деньги или новый товар</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="feedback" id="feedback">
+        <div class="container">
+            <img src="images/qr-code.png" alt="" class="image">
+            <h1 class="blocktitle">ОФОРМИТЬ ЗАКАЗ</h1>
+            <h1 class="appeal">Быстрое сообщение<font color="#1D74ED"> WHATSAPP</font></h1>
+
+            <form class="form">
+                <div class="form-item">
+                    <h1>Ваше ФИО:<img src="images/Instagram.png" alt=""></h1>
+                    <input type="text" placeholder="Иванов Иван Иванович" maxlength="50" id="email-name" name="email-name">
+                </div>
+                <div class="form-item">
+                    <h1>Ваша электронная почта:<img src="images/Instagram.png" alt=""></h1>
+                    <input type="text" placeholder="ivanov1999@domen.ru" maxlength="50" id="email-email" name="email-email">
+                </div>
+                <div class="form-item">
+                    <h1>Сообщение:<img src="images/Instagram.png" alt=""></h1>
+                    <textarea type="text" placeholder="Заказ/интересующие вопросы" class="message-form" maxlength="5000" id="email-message" name="email-message"></textarea>
+                </div>
+                <p>Примечание: <font color="#BABABA">вся личная информация остаётся в строгой</font> <font color="#1D74ED">конфидициальности</font></p>
+                <button type="button" onclick="sendMail()">Отправить</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
